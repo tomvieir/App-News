@@ -4,13 +4,14 @@
    border-radius: 25px;
    border: none;
    color: var(--white);
+   padding: 0.5rem 1rem;
 
    background-color: var(--grey-500);
 
    outline: none;
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-between;
 
 
     svg {
@@ -22,6 +23,10 @@
 
     svg:first-child {
         margin-right: .5rem;
+    }
+
+    .SvgCloseIcon {
+        margin-left: 1rem;
     }
 
     &:hover {

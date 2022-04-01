@@ -1,4 +1,25 @@
-.title {
+.Main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding:7rem 2rem;
+    position: relative;
 
-    
+    max-width: 1120px;
+
+    font-size: 170%;
+
+    img {
+        width:40%;
+    }
+
+    @media (max-width: 400px) {
+        flex-wrap: wrap;
+
+        img {
+            width:100%;
+            margin-top: 5rem;
+        }
+    }
 }
