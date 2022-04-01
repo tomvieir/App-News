@@ -56,17 +56,12 @@
                 background-color: var(--yellow-500);
             }
 
-            
-
         }
+  
+    }
 
-        button {
-            position: absolute;
-
-            right: 0;
-            transform: translateY(100%);
-            margin-right: 2rem; 
-        }
+    button {
+        margin-left: auto
     }
 }
-  
+

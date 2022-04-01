@@ -1,0 +1,31 @@
+.SignInButton {
+   width: 15rem;
+   height: 3rem;
+   border-radius: 25px;
+   border: none;
+   color: var(--white);
+
+   background-color: var(--grey-500);
+
+   outline: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+
+    svg {
+        width: 20px;
+        height: 20px;   
+    }
+
+    transition: filter 0.3s;
+
+    svg:first-child {
+        margin-right: .5rem;
+    }
+
+    &:hover {
+        filter: brightness(1.9);
+    }
+
+}
