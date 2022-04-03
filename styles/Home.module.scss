@@ -1,14 +1,19 @@
 .Main {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto;
-    padding:7rem 2rem;
+    padding:5rem;
+    padding-top: 5rem;
     position: relative;
-
     max-width: 1120px;
-
     font-size: 170%;
+
+    section {
+        span {
+            color: var(--cyan-500);
+        }
+    }
 
     img {
         width:40%;

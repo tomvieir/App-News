@@ -1,28 +1,21 @@
 .headerContainer {
     height: 5rem;
-    border-bottom: 1px solid var(--grey-300);
-    
+    border-bottom: 1px solid var(--grey-300);  
 }
 
 .headerContent {
     max-width: 1120px;
     height: 5rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 5rem;
 
     display: flex;
     align-items: center;
     position: relative;
 
-
-
-
-
-
     nav {
         margin-left: 5rem;
         height:5rem;
-        
         
         a {
             display: inline-block;
