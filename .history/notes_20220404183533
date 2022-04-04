@@ -1,0 +1,3 @@
+client-side = chamadas feitas pelo lado do cliente
+server-side = chamadas feitas pelo servidor, depois que o site carrega
+static = forma que nao muda enquanto 
