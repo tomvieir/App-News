@@ -5,6 +5,7 @@
    border: none;
    color: var(--white);
    padding: 0.5rem 1rem;
+   font-size: .8rem;
 
    background-color: var(--grey-500);
 
@@ -14,9 +15,20 @@
    justify-content: space-between;
 
 
+
+
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 25px; 
+        margin-right: 1rem;  
+    }
+
     svg {
         width: 20px;
-        height: 20px;   
+        height: 20px;
+        border-radius: 25px; 
+          
     }
 
     transition: filter 0.3s;
@@ -30,7 +42,7 @@
     }
 
     &:hover {
-        filter: brightness(1.9);
+        filter: brightness(.9);
     }
 
 }

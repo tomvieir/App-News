@@ -5,7 +5,6 @@ interface SubscribeButton {
 }
 
 export function SubscribeButton({ priceId }: SubscribeButton) {
-    console.log(priceId);
     return (
         <button type="button" className={styles.SubscribeButton}>
             Subscribe now
