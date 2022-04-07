@@ -5,12 +5,13 @@ import styles from './styles.module.scss';
 
 export function SignInButton() {
     const {data: session} = useSession();
+    console.log(session);
     
 
 
     return session ? (
         <button type="button" className={styles.SignInButton} >
-            <img src={session.user.image} alt="imagem de perfil" />
+            <img src={session.user.image} alt="" />
                 {session.user.name}
             <FiX color='#727272' className={styles.SvgCloseIcon} onClick={() => signOut()}/>
         </button>
