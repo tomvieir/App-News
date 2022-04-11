@@ -34,7 +34,7 @@ export default NextAuth({
             ),
 
             q.Create(q.Collection("users"), {
-              data: { email }
+              data: { email: user.email }
             }),
             q.Get(
               q.Match(
