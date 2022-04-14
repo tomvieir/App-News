@@ -1,0 +1,26 @@
+{
+  "id": "9c3f9343-0d43-4efc-909c-7898e4828449",
+  "uid": "nihil-a-debitis",
+  "type": "my-custom-publication",
+  "data": {
+    "Title": [
+      {
+        "type": "heading2",
+        "text": "Implement bleeding-edge web services",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "heading1",
+        "text": "Engineer vertical communities",
+        "spans": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Consectetur excepteur nostrud laborum mollit tempor id aliqua sit.",
+        "spans": []
+      }
+    ]
+  }
+}
