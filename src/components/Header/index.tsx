@@ -8,8 +8,8 @@ export function Header() {
             <img src="/images/logo.svg" alt="Logo" />
 
             <nav>
-                <a href="" className={styles.active}>Home</a>
-                <a href="">Posts</a>           
+                <a href="http://localhost:3000/" className={styles.active}>Home</a>
+                <a href="http://localhost:3000/posts">Posts</a>           
             </nav>
 
             <SignInButton />
