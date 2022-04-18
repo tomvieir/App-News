@@ -9,7 +9,7 @@ export function Header() {
 
             <nav>
                 <a href="http://localhost:3000/" className={styles.active}>Home</a>
-                <a href="http://localhost:3000/posts">Posts</a>           
+                <a href="">Posts</a>           
             </nav>
 
             <SignInButton />
