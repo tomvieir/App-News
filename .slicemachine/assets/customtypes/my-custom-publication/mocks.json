@@ -1,19 +1,19 @@
 {
-  "id": "6b630b4e-9105-4c46-9f85-1b50feb1d252",
-  "uid": "consequatur-quia-alias",
+  "id": "4e5b149c-0bb4-4cad-a5ea-8cd8e777ff47",
+  "uid": "illo-illo-nostrum",
   "type": "my-custom-publication",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Extend B2B bandwidth",
+        "text": "Empower best-of-breed users",
         "spans": []
       }
     ],
     "content": [
       {
         "type": "heading1",
-        "text": "Incentivize granular experiences",
+        "text": "Repurpose back-end niches",
         "spans": []
       },
       {
@@ -24,11 +24,11 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
       },
       {
         "type": "paragraph",
-        "text": "Aute et nostrud elit sint adipisicing id amet Lorem ex mollit.",
+        "text": "Et non aliquip voluptate officia veniam nulla aliquip duis quis consectetur Lorem tempor do magna. Ut ex culpa quis incididunt aliqua ut ullamco dolore irure nisi eiusmod consequat Lorem.",
         "spans": []
       }
     ]
