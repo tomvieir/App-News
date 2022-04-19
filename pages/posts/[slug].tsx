@@ -11,6 +11,7 @@ interface PostsProps {
         content: string,
         slug: string,
         updatedAt: string,
+        author: string,
     }
 }
 
@@ -30,6 +31,7 @@ export default function Posts({ post }: PostsProps) {
 
                         dangerouslySetInnerHTML={{__html: post.content}} //prismic trata a vulnerabilidade nesse caso
                     />
+                    <p className={styles.author}>By: {post.author}</p>
 
                     
                 </article>
@@ -51,13 +53,14 @@ export const getServerSideProps: GetServerSideProps = async ( { req, params }) =
         slug,
         title: RichText.asText(response.data.title),
         content: RichText.asHtml(response.data.content),
+        author: response.data.author.find((author: { type: string; }) => author.type === 'paragraph')?.text ?? '',
         updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR', { 
             day: '2-digit',
             month: 'long',
             year:'numeric'
         })
     }
-    console.log(response)
+    console.log(JSON.stringify(response, null, 2))
 
     return {
         props: {

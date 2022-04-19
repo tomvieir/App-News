@@ -12,6 +12,7 @@ type Post = {
     title: string;
     excerpt: string;
     updatedAt: string;
+    author: string;
 }
 
 interface PostsProps {
@@ -31,9 +32,10 @@ export default function Posts( { posts }: PostsProps ) {
                     { posts.map(post => (
                     <Link href={`/posts/${post.slug}`}>
                         <a key={post.slug}  href="">
-                            <time>{post.updatedAt}</time>
                             <strong>{post.title}</strong>
-                            <p>{post.excerpt}</p>
+                            <time>{post.updatedAt}</time>
+                            <p className={styles.author}>By: {post.author}</p>                          
+                            <p>{post.excerpt}</p>                           
                         </a>
                     </Link>
                     ))}
@@ -59,6 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
             slug: post.uid,
             title: RichText.asText(post.data.title),
             excerpt: post.data.content.find((content: { type: string; }) => content.type === 'paragraph')?.text ?? '',
+            author: post.data.author.find((author: { type: string; }) => author.type === 'paragraph')?.text ?? '',
             updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', { 
                 day: '2-digit',
                 month: 'long',
