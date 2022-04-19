@@ -1,19 +1,19 @@
 {
-  "id": "4e5b149c-0bb4-4cad-a5ea-8cd8e777ff47",
-  "uid": "illo-illo-nostrum",
+  "id": "1e0aad3e-c655-47ac-8326-09911fa01dd6",
+  "uid": "in-eius-distinctio",
   "type": "my-custom-publication",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Empower best-of-breed users",
+        "text": "Morph leading-edge portals",
         "spans": []
       }
     ],
     "content": [
       {
         "type": "heading1",
-        "text": "Repurpose back-end niches",
+        "text": "Synthesize synergistic interfaces",
         "spans": []
       },
       {
@@ -24,11 +24,18 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
       },
       {
         "type": "paragraph",
-        "text": "Et non aliquip voluptate officia veniam nulla aliquip duis quis consectetur Lorem tempor do magna. Ut ex culpa quis incididunt aliqua ut ullamco dolore irure nisi eiusmod consequat Lorem.",
+        "text": "Adipisicing laboris aliqua anim irure esse dolore velit elit minim officia. Nulla adipisicing nisi est dolore anim eiusmod duis adipisicing deserunt est ullamco sunt. Esse enim dolore non cupidatat incididunt excepteur tempor elit ea duis esse et.",
+        "spans": []
+      }
+    ],
+    "author": [
+      {
+        "type": "paragraph",
+        "text": "Fugiat labore occaecat enim enim incididunt proident laborum irure velit aliquip qui excepteur laboris deserunt. Reprehenderit commodo minim ullamco minim tempor ea reprehenderit nostrud ipsum. Officia magna esse incididunt fugiat proident eiusmod duis.",
         "spans": []
       }
     ]

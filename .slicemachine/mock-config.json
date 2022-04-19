@@ -12,6 +12,12 @@
           "patternType": "HEADING",
           "blocks": 1
         }
+      },
+      "author": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     }
   }
