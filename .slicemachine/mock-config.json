@@ -1,15 +1,15 @@
 {
   "_cts": {
     "my-custom-publication": {
-      "Title": {
-        "config": {
-          "patternType": "HEADING",
-          "blocks": 1
-        }
-      },
       "content": {
         "config": {
           "patternType": "STORY",
+          "blocks": 1
+        }
+      },
+      "title": {
+        "config": {
+          "patternType": "HEADING",
           "blocks": 1
         }
       }

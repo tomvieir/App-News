@@ -12,10 +12,10 @@
           "placeholder": ""
         }
       },
-      "Title": {
+      "title": {
         "type": "StructuredText",
         "config": {
-          "label": "Title",
+          "label": "title",
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
