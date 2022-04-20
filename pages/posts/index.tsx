@@ -13,6 +13,10 @@ type Post = {
     excerpt: string;
     updatedAt: string;
     author: string;
+    image: {
+        url: string;
+    }
+    
 }
 
 interface PostsProps {
@@ -32,6 +36,7 @@ export default function Posts( { posts }: PostsProps ) {
                     { posts.map(post => (
                     <Link href={`/posts/${post.slug}`}>
                         <a key={post.slug}  href="">
+                            <img src={post.image.url} alt="" />
                             <strong>{post.title}</strong>
                             <time>{post.updatedAt}</time>
                             <p className={styles.author}>By: {post.author}</p>                          
@@ -52,7 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const response = await prismic.query<any>([
         Prismic.Predicates.at('document.type', 'my-custom-publication'),
     ],  {
-        fetch: ['publication.title', 'publication.content'],
+        fetch: ['publication.title', 'publication.content', 'publication.image'],
         pageSize: 100,
     })
 
@@ -62,6 +67,8 @@ export const getStaticProps: GetStaticProps = async () => {
             title: RichText.asText(post.data.title),
             excerpt: post.data.content.find((content: { type: string; }) => content.type === 'paragraph')?.text ?? '',
             author: post.data.author.find((author: { type: string; }) => author.type === 'paragraph')?.text ?? '',
+            image: post.data.image,
+
             updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', { 
                 day: '2-digit',
                 month: 'long',

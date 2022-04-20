@@ -12,6 +12,9 @@ interface PostsProps {
         slug: string,
         updatedAt: string,
         author: string,
+        image: {
+            url: string
+        }
     }
 }
 
@@ -24,6 +27,7 @@ export default function Posts({ post }: PostsProps) {
 
             <main className={styles.container}>
                 <article className={styles.post}>
+                    <img src={post.image.url} alt="" />
                     <h1>{post.title}</h1>
                     <time>{post.updatedAt}</time>
                     <div 
@@ -32,6 +36,7 @@ export default function Posts({ post }: PostsProps) {
                         dangerouslySetInnerHTML={{__html: post.content}} //prismic trata a vulnerabilidade nesse caso
                     />
                     <p className={styles.author}>By: {post.author}</p>
+                   
 
                     
                 </article>
@@ -47,13 +52,19 @@ export const getServerSideProps: GetServerSideProps = async ( { req, params }) =
 
     const prismic = getPrismicClient(req)
 
-    const response = await prismic.getByUID<any>('my-custom-publication', String(slug), {})
+    const response = await prismic.getByUID<any>('my-custom-publication', String(slug), {
+        fetch: ['publication.image'],
+       
+       
+    })
 
     const post = {
         slug,
         title: RichText.asText(response.data.title),
         content: RichText.asHtml(response.data.content),
         author: response.data.author.find((author: { type: string; }) => author.type === 'paragraph')?.text ?? '',
+        image: response.data.image,
+       
         updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR', { 
             day: '2-digit',
             month: 'long',
