@@ -38,6 +38,16 @@
           "allowTargetBlank": true,
           "single": "paragraph"
         }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": {
+            "height": 400
+          },
+          "thumbnails": []
+        }
       }
     }
   }

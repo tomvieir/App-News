@@ -18,6 +18,9 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
+      },
+      "image": {
+        "content": "https://unsplash.com/s/photos/developer"
       }
     }
   }

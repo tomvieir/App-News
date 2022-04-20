@@ -1,19 +1,19 @@
 {
-  "id": "1e0aad3e-c655-47ac-8326-09911fa01dd6",
-  "uid": "in-eius-distinctio",
+  "id": "25ebb08f-b2b3-4e78-8eaf-368e223b4391",
+  "uid": "occaecati-aut-consequatur",
   "type": "my-custom-publication",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Morph leading-edge portals",
+        "text": "Cultivate B2B initiatives",
         "spans": []
       }
     ],
     "content": [
       {
         "type": "heading1",
-        "text": "Synthesize synergistic interfaces",
+        "text": "Integrate web-enabled portals",
         "spans": []
       },
       {
@@ -24,20 +24,29 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
       },
       {
         "type": "paragraph",
-        "text": "Adipisicing laboris aliqua anim irure esse dolore velit elit minim officia. Nulla adipisicing nisi est dolore anim eiusmod duis adipisicing deserunt est ullamco sunt. Esse enim dolore non cupidatat incididunt excepteur tempor elit ea duis esse et.",
+        "text": "Eiusmod in irure do duis ipsum quis officia nostrud ut adipisicing exercitation. Lorem ex commodo pariatur ad officia amet aliqua in irure incididunt consequat qui. Do fugiat enim eu eu consectetur laborum quis id cupidatat ex sit commodo.",
         "spans": []
       }
     ],
     "author": [
       {
         "type": "paragraph",
-        "text": "Fugiat labore occaecat enim enim incididunt proident laborum irure velit aliquip qui excepteur laboris deserunt. Reprehenderit commodo minim ullamco minim tempor ea reprehenderit nostrud ipsum. Officia magna esse incididunt fugiat proident eiusmod duis.",
+        "text": "Qui ex fugiat tempor et. Dolor et et incididunt voluptate labore ut ea aliquip amet Lorem reprehenderit culpa minim.",
         "spans": []
       }
-    ]
+    ],
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 400
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://unsplash.com/s/photos/developer?w=900&h=400&fit=crop"
+    }
   }
 }
