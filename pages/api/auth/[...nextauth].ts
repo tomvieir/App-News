@@ -17,28 +17,30 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_SECRET,
     })
   ],
+  
   callbacks: {
+    
     async signIn({ user, account, profile }) {
       const { email } = user
 
-      try {
+      try{
         await fauna.query(
           q.If(
             q.Not(
               q.Exists(
                 q.Match(
-                  q.Index("user_by_email"),
+                  q.Index('user_by_email'),
                   q.Casefold(user.email)
                 )
               )
             ),
-
-            q.Create(q.Collection("users"), {
-              data: { email: user.email }
-            }),
+            q.Create(
+              q.Collection('users'),
+              { data: { email } }
+            ),
             q.Get(
               q.Match(
-                q.Index("user_by_email"),
+                q.Index('user_by_email'),
                 q.Casefold(user.email)
               )
             )
@@ -46,7 +48,7 @@ export default NextAuth({
         )
         return true
       } catch(err) {
-        console.error(err)
+        console.log('error')
         return false
       }
 
