@@ -36,20 +36,27 @@ export default function Posts({ post }: PostsProps) {
                         dangerouslySetInnerHTML={{__html: post.content}} //prismic trata a vulnerabilidade nesse caso
                     />
                     <p className={styles.author}>By: {post.author}</p>
-                   
-
-                    
+                                      
                 </article>
             </main>
         </>
     )
 }
 
-export const getServerSideProps: GetServerSideProps = async ( { req, params }) => {
+export const getServerSideProps: GetServerSideProps = async ( { req, params }) => { 
     const session = await getSession( { req } )
     const { slug } = params
 
+    console.log(session)
 
+    if (!session.userActiveSubscription) { //se não estiver logado
+        return{
+            redirect: {
+                destination: '/',   // redirect to login page
+                permanent: false // temporary redirect
+            }
+        }
+    }
     const prismic = getPrismicClient(req)
 
     const response = await prismic.getByUID<any>('my-custom-publication', String(slug), {

@@ -4,6 +4,7 @@ import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
 import styles from './styles.module.scss';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/router';
 
 
 interface SubscribeButton {
@@ -12,10 +13,16 @@ interface SubscribeButton {
 
 export function SubscribeButton({ priceId }: SubscribeButton) {
     const {data: session} = useSession();
+    const router = useRouter()
 
     async function handleSubscribe() {
         if (!session) {
             signIn('github, google')
+            return
+        }
+
+        if (session.activeSubscription) {
+            router.push('/posts')
             return
         }
 
