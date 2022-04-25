@@ -48,7 +48,7 @@ export default NextAuth({
 
         return {
           ...session,
-          userActiveSubscription: userActiveSubscription
+          activeSubscription: userActiveSubscription
 
         }
 
@@ -56,7 +56,7 @@ export default NextAuth({
         console.log(err)
         return {
           ...session,
-          userActiveSubscription: null
+          activeSubscription: null
         }
       }
     },
