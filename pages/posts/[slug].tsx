@@ -18,7 +18,7 @@ interface PostsProps {
     }
 }
 
-export default function Posts({ post }: PostsProps) {
+export default function Post({ post }: PostsProps) {
     return (
         <>  
             <Head>
@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async ( { req, params }) =
 
     console.log(session)
 
-    if (!session.userActiveSubscription) { //se não estiver logado
+    if (!session?.activeSubscription) { //se não estiver logado
         return{
             redirect: {
                 destination: '/',   // redirect to login page

@@ -1,6 +1,10 @@
-import { GetStaticProps} from "next"
+import { GetStaticPaths, GetStaticProps} from "next"
+import { useSession } from "next-auth/react"
 import Head from "next/head"
+import Link from "next/link"
+import{ useRouter } from "next/router"
 import { RichText } from "prismic-dom"
+import { useEffect } from "react"
 import { getPrismicClient } from "../../../src/services/prismic"
 import styles from '../post.module.scss'
 
@@ -18,6 +22,15 @@ interface PostPreviewProps {
 }
 
 export default function PostPreview({ post }: PostPreviewProps) {
+    const { data: session } = useSession()
+    const router = useRouter()
+
+    useEffect(() => {
+        if (session?.activeSubscription) {
+            router.push(`/posts/${post.slug}`)           
+        }
+    }, [session])
+
     return (
         <>  
             <Head>
@@ -29,28 +42,34 @@ export default function PostPreview({ post }: PostPreviewProps) {
                     <img src={post.image.url} alt="" />
                     <h1>{post.title}</h1>
                     <time>{post.updatedAt}</time>
+                    <p className={styles.author}>By: {post.author}</p>
                     <div 
-                       className={styles.postContent}
+                       className={`${styles.postContent} ${styles.previewContent}`}
 
                         dangerouslySetInnerHTML={{__html: post.content}} //prismic trata a vulnerabilidade nesse caso
                     />
-                    <p className={styles.author}>By: {post.author}</p>
-                                      
+                    <div className={styles.continueReading}> 
+                        <Link href='/'>
+                            Wanna continue reading? Click here and subscribe now!
+                        </Link>                      
+                        
+                    </div>                   
                 </article>
             </main>
         </>
     )
 }
 
-// export const getStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
 
-//     return {
-        
-//     }   
+    return {
+        paths: [],
+        fallback: 'blocking'
+    }   
 
-// }
+}
 
-export const getStaticProps: GetStaticProps = async ( { params }) => { 
+export const getStaticProps: GetStaticProps = async ( { params } ) => { 
     
     const { slug } = params
 
@@ -63,7 +82,7 @@ export const getStaticProps: GetStaticProps = async ( { params }) => {
     const post = {
         slug,
         title: RichText.asText(response.data.title),
-        content: RichText.asHtml(response.data.content),
+        content: RichText.asHtml(response.data.content.splice(0, 3)),
         author: response.data.author.find((author: { type: string; }) => author.type === 'paragraph')?.text ?? '',
         image: response.data.image,
        
@@ -77,7 +96,9 @@ export const getStaticProps: GetStaticProps = async ( { params }) => {
     return {
         props: {
             post,
-        }
+        },
+        revalidate: 60*30 //30 min
+
     }
 
 }
