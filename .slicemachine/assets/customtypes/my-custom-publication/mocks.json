@@ -1,41 +1,31 @@
 {
-  "id": "25ebb08f-b2b3-4e78-8eaf-368e223b4391",
-  "uid": "occaecati-aut-consequatur",
+  "id": "9d89cdc5-c087-4a79-902b-869d2f607cb6",
+  "uid": "hic-sed-eaque",
   "type": "my-custom-publication",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Cultivate B2B initiatives",
+        "text": "Integrate B2C e-services",
         "spans": []
       }
     ],
     "content": [
       {
         "type": "heading1",
-        "text": "Integrate web-enabled portals",
+        "text": "Exploit rich infrastructures",
         "spans": []
       },
       {
-        "type": "image",
-        "dimensions": {
-          "width": 900,
-          "height": 500
-        },
-        "alt": "Placeholder image",
-        "copyright": null,
-        "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
-      },
-      {
         "type": "paragraph",
-        "text": "Eiusmod in irure do duis ipsum quis officia nostrud ut adipisicing exercitation. Lorem ex commodo pariatur ad officia amet aliqua in irure incididunt consequat qui. Do fugiat enim eu eu consectetur laborum quis id cupidatat ex sit commodo.",
+        "text": "Voluptate labore duis cillum nisi et labore ea anim sunt dolor ex. Qui ad pariatur qui.",
         "spans": []
       }
     ],
     "author": [
       {
         "type": "paragraph",
-        "text": "Qui ex fugiat tempor et. Dolor et et incididunt voluptate labore ut ea aliquip amet Lorem reprehenderit culpa minim.",
+        "text": "Occaecat irure nostrud laboris aliqua adipisicing proident nostrud qui sit sit id dolore.",
         "spans": []
       }
     ],
