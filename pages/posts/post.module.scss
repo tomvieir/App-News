@@ -10,6 +10,7 @@
 
     h1 {
         color: var(--cyan-500);
+        margin-bottom: 1rem;
     }
 
     
@@ -25,7 +26,7 @@
         margin-bottom: 2rem;
     }
     div {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: "JetBrains Mono", sans-serif;
         margin-top: 0.5rem;
         line-height: 1.5rem;
     }
@@ -36,6 +37,38 @@
         margin-bottom: 2rem;
         border-radius: 1rem;
         
+    }
+
+    .postContent {
+        font-size: 1rem;
+
+        &.previewContent {
+            background: linear-gradient(var(--grey-100), transparent);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .continueReading{
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--cyan-500);
+        text-decoration: none;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        padding:1rem;
+        
+        border: 1px solid var(--cyan-500);
+        
+        background: var(--grey-500); 
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+        
+        &:hover {
+           background: rgb(58, 58, 99);           
+        }
     }
 }
 .author {
