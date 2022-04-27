@@ -52,7 +52,7 @@ export const getServerSideProps: GetServerSideProps = async ( { req, params }) =
     if (!session?.activeSubscription) { //se não estiver logado
         return{
             redirect: {
-                destination: '/',   // redirect to login page
+                destination:  `/`,   // redirect to login page
                 permanent: false // temporary redirect
             }
         }

@@ -13,9 +13,10 @@
    display: flex;
    align-items: center;
    justify-content: space-evenly;
-
-
-
+   
+  @media (max-width: 468px) {
+      width: 10rem;
+  }
 
     img {
         width: 20px;
@@ -45,4 +46,5 @@
         filter: brightness(.9);
     }
 
+    
 }

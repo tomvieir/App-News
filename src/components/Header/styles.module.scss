@@ -13,9 +13,21 @@
     align-items: center;
     position: relative;
 
+    @media (max-width: 768px) {
+        padding: 0 2rem;
+    }
+
+    .logo {
+        width: 3rem;
+    }
+
     nav {
         margin-left: 5rem;
         height:5rem;
+
+        @media (max-width: 768px) {
+            margin-left:1rem;
+        }
         
         a {
             display: inline-block;

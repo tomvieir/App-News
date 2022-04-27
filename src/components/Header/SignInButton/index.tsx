@@ -9,13 +9,14 @@ export function SignInButton() {
     return session ? (
         <button type="button" className={styles.SignInButton} >
             <img src={session.user.image} alt="" />
-            {session.user.name}
+           <span>{session.user.name}</span> 
             <FiX color='#727272' className={styles.SvgCloseIcon} onClick={() => signOut()} />
         </button>
     ) : (
         <button type="button" className={styles.SignInButton} onClick={() => signIn('github, facebook')} >
             <FaUser color='#06ccfd' />
-            SignIn
+            
+            <span>SignIn</span>
 
         </button>
     )

@@ -29,7 +29,7 @@ export default function Home({ product }: HomeProps) {
           <br />
 
           <h1>News about <br />
-            the <span>React</span> world 
+            the <span>Tec</span> world 
           </h1>
 
           <h6>Get acess to all publications <br />
