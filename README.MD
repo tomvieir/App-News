@@ -23,3 +23,9 @@ AppNews é um projeto relativamente simples que traz algumas funcionalidades imp
 - `NextAuth`: Sistema de autenticação do NextJS.;
 
 - `Toastfy`: Para notificar erros ao usuário.
+
+<br/>
+<br/>
+
+Clique na imagem abaixo para assistir no youtube um video demonstrativo. <br/>
+[![Alt text](https://img.youtube.com/vi/clG46F9sIrc/0.jpg)](https://www.youtube.com/watch?v=clG46F9sIrc)
