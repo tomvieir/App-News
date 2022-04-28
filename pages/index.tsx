@@ -21,6 +21,7 @@ export default function Home({ product }: HomeProps) {
       </Head>
 
       <main className={styles.Main}>
+        <img src="/images/img.svg" alt="coding img" />
         <section>
           <h6>
             Hey, welcome 
@@ -42,7 +43,7 @@ export default function Home({ product }: HomeProps) {
 
         </section>
 
-        <img src="/images/avatar.svg" alt="coding img" />
+        
       </main>
     </>
   )

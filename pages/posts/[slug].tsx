@@ -27,7 +27,7 @@ export default function Post({ post }: PostsProps) {
 
             <main className={styles.container}>
                 <article className={styles.post}>
-                    <img src={post.image.url} alt="" />
+                    <img src={post.image.url} alt="img" />
                     <h1>{post.title}</h1>
                     <time>{post.updatedAt}</time>
                     <div 

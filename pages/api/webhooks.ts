@@ -69,7 +69,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             throw new Error("Unhandle event");
         }
       } catch (err) {
-        // console.log("Erro", err); //Ainda persiste um erro 404 no console 
         return res.json({ err: "Webhooks handler filed" });
       }
     }
