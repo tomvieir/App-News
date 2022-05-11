@@ -19,6 +19,10 @@ export function Header() {
                 <Link href="/posts" prefetch>
                     <a className = {asPath === '/posts' ? styles.active : ''}>Posts</a>
                 </Link>
+
+                <Link href="/contacts" prefetch>
+                    <a className = {asPath === '/contacts' ? styles.active : ''}>Contact</a>
+                </Link>
                        
             </nav>
 
