@@ -1,6 +1,11 @@
 .headerContainer {
     height: 5rem;
     border-bottom: 1px solid var(--grey-300);  
+    
+    @media (max-width: 768px) {
+        display: none;
+    }
+    
 }
 
 .headerContent {
@@ -15,6 +20,8 @@
 
     @media (max-width: 768px) {
         padding: 0 2rem;
+
+        
     }
 
     .logo {
