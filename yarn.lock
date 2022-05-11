@@ -4754,7 +4754,7 @@
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-2.0.3.tgz"
   "version" "2.0.3"
 
-"nodemailer@^6.6.5", "nodemailer@^6.7.5":
+"nodemailer@^6.6.5":
   "integrity" "sha512-6VtMpwhsrixq1HDYSBBHvW0GwiWawE75dS3oal48VqRhUvKJNnKnJo2RI/bCVQubj1vgrgscMNW4DHaD6xtMCg=="
   "resolved" "https://registry.npmjs.org/nodemailer/-/nodemailer-6.7.5.tgz"
   "version" "6.7.5"
