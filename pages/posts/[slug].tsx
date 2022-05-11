@@ -20,7 +20,7 @@ interface PostsProps {
 
 export default function Post({ post }: PostsProps) {
     return (
-        <>  
+        <>
             <Head>
                 <title>{post.title} | AppNews</title>
             </Head>
@@ -30,29 +30,29 @@ export default function Post({ post }: PostsProps) {
                     <img src={post.image.url} alt="img" />
                     <h1>{post.title}</h1>
                     <time>{post.updatedAt}</time>
-                    <div 
-                       className={styles.postContent}
+                    <div
+                        className={styles.postContent}
 
-                        dangerouslySetInnerHTML={{__html: post.content}} //prismic trata a vulnerabilidade nesse caso
+                        dangerouslySetInnerHTML={{ __html: post.content }} //prismic trata a vulnerabilidade nesse caso
                     />
                     <p className={styles.author}>By: {post.author}</p>
-                                      
+
                 </article>
             </main>
         </>
     )
 }
 
-export const getServerSideProps: GetServerSideProps = async ( { req, params }) => { 
-    const session = await getSession( { req } )
+export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+    const session = await getSession({ req })
     const { slug } = params
 
     console.log(session)
 
     if (!session?.activeSubscription) { //se não estiver logado
-        return{
+        return {
             redirect: {
-                destination:  `/`,   // redirect to login page
+                destination: `/`,   // redirect to login page
                 permanent: false // temporary redirect
             }
         }
@@ -61,8 +61,8 @@ export const getServerSideProps: GetServerSideProps = async ( { req, params }) =
 
     const response = await prismic.getByUID<any>('my-custom-publication', String(slug), {
         fetch: ['publication.image'],
-       
-       
+
+
     })
 
     const post = {
@@ -71,13 +71,14 @@ export const getServerSideProps: GetServerSideProps = async ( { req, params }) =
         content: RichText.asHtml(response.data.content),
         author: response.data.author.find((author: { type: string; }) => author.type === 'paragraph')?.text ?? '',
         image: response.data.image,
-       
-        updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR', { 
+
+        updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
             day: '2-digit',
             month: 'long',
-            year:'numeric'
+            year: 'numeric'
         })
     }
+
     // console.log(JSON.stringify(response, null, 2))
 
     return {
