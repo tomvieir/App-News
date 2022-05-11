@@ -5,6 +5,7 @@ import { SubscribeButton } from '../src/components/SubscribeButton'
 
 import { GetStaticProps } from 'next'
 import { stripe } from '../src/services/stripe'
+import { SignInButton } from '../src/components/Header/SignInButton'
 
 interface HomeProps{
   product:{
@@ -37,7 +38,7 @@ export default function Home({ product }: HomeProps) {
             <span>for {product.amount} month</span>
           </h6>
 
-          
+         
 
           <SubscribeButton priceId={product.priceId}/>
 

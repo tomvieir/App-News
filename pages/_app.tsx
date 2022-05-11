@@ -4,6 +4,7 @@ import { AppProps } from 'next/app'
 import { Header } from '../src/components/Header'
 import { SessionProvider } from 'next-auth/react'
 import { ToastContainer } from 'react-toastify'
+import Drawer from '../src/components/Drawer'
 
 export function toastCss() {
   return {
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         draggable
         pauseOnHover />
       <Header />
+      <Drawer />
       <Component {...pageProps} />
     </SessionProvider >
   )
