@@ -7,6 +7,11 @@ import { GetStaticProps } from 'next'
 import { stripe } from '../src/services/stripe'
 import { SignInButton } from '../src/components/Header/SignInButton'
 
+import { useEffect } from "react";
+import AOS from "aos";
+
+import "aos/dist/aos.css";
+
 interface HomeProps{
   product:{
     priceId: string,
@@ -15,16 +20,24 @@ interface HomeProps{
 }
 
 export default function Home({ product }: HomeProps) {
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 500,
+    });
+  }, []);
+
   return (
     <>
-      <Head>
+      <Head >
         <title>Home | App.News</title>
       </Head>
 
-      <main className={styles.Main}>
+      <main className={styles.Main} data-aos="fade-out">
         <img src="/images/img.svg" alt="coding img" />
         <section>
-          <h6>
+          <h6 >
             Hey, welcome 
           </h6>
 
